@@ -19,11 +19,6 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.helger</groupId>
-    <artifactId>parent-pom</artifactId>
-    <version>3.0.2</version>
-  </parent>
   <groupId>com.helger.phase4</groupId>
   <artifactId>phase4-parent-pom</artifactId>
   <version>4.0.2-SNAPSHOT</version>
@@ -92,6 +87,13 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version>
+        <type>pom</type>
+        <scope>import</scope>
+    </dependency>
       <dependency>
         <groupId>com.helger.commons</groupId>
         <artifactId>ph-commons-parent-pom</artifactId>
@@ -356,5 +358,6 @@
     <module>phase4-peppol-client</module>
     <module>phase4-peppol-servlet</module>
     <module>phase4-peppol-server-webapp</module>
+    <module>peppol-portal</module>
   </modules>
 </project>
